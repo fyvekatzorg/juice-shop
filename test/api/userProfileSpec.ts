@@ -15,9 +15,7 @@ beforeAll(() => {
   return frisby.post(`${URL}/rest/user/login`, {
     headers: jsonHeader,
     body: {
-      email: 'jim@juice-sh.op',
-      password: 'ncc-1701'
-    }
+      email: 'jim@juice-sh.op', password: 'ncc-1701'}
   })
     .expect('status', 200)
     .then(({ json }) => {
