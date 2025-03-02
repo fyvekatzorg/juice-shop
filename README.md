@@ -62,10 +62,6 @@ For a detailed introduction, full list of features and architecture overview ple
 > You can find some less common installation variations as well as instructions to run Juice Shop on a variety of cloud computing providers in
 > [the _Running OWASP Juice Shop_ documentation](https://pwning.owasp-juice.shop/companion-guide/latest/part1/running.html).
 
-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
-
-
-
 ### From Sources
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/juice-shop/juice-shop.svg)
@@ -80,6 +76,9 @@ github_pat_11AAMMQDI0MRdCA0pXdUqi_iYywDvtDzfmb7TmIbvVP6zM82hdKwa5rTgtniZvUlSPKGX
 6. Browse to <http://localhost:3000>
 
 ### Packaged Distributions
+
+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
+
 
 [![GitHub release](https://img.shields.io/github/downloads/juice-shop/juice-shop/total.svg)](https://github.com/juice-shop/juice-shop/releases/latest)
 [![SourceForge](https://img.shields.io/sourceforge/dm/juice-shop?label=sourceforge%20downloads)](https://sourceforge.net/projects/juice-shop/)
