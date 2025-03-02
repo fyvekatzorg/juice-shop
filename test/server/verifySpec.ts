@@ -45,7 +45,9 @@ describe('verify', () => {
 
     it('is not solved when an authenticated user passes his own ID when writing feedback', () => {
       req.body.UserId = 42
-      req.headers = { authorization: 'Bearer token12345' }
+{
+    authorization: 'Bearer token12345'
+}
 
       verify.forgedFeedbackChallenge()(req, res, next)
 
@@ -54,7 +56,9 @@ describe('verify', () => {
 
     it('is not solved when an authenticated user passes no ID when writing feedback', () => {
       req.body.UserId = undefined
-      req.headers = { authorization: 'Bearer token12345' }
+{
+    authorization: 'Bearer token12345'
+}
 
       verify.forgedFeedbackChallenge()(req, res, next)
 
@@ -63,7 +67,9 @@ describe('verify', () => {
 
     it('is solved when an authenticated user passes someone elses ID when writing feedback', () => {
       req.body.UserId = 1
-      req.headers = { authorization: 'Bearer token12345' }
+{
+    authorization: 'Bearer token12345'
+}
 
       verify.forgedFeedbackChallenge()(req, res, next)
 
@@ -260,7 +266,9 @@ describe('verify', () => {
       Header: { "alg": "none", "typ": "JWT" }
       Payload: { "data": { "email": "jwtn3d@juice-sh.op" }, "iat": 1508639612, "exp": 9999999999 }
        */
-      req.headers = { authorization: 'Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJkYXRhIjp7ImVtYWlsIjoiand0bjNkQGp1aWNlLXNoLm9wIn0sImlhdCI6MTUwODYzOTYxMiwiZXhwIjo5OTk5OTk5OTk5fQ.' }
+{
+    authorization: 'Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJkYXRhIjp7ImVtYWlsIjoiand0bjNkQGp1aWNlLXNoLm9wIn0sImlhdCI6MTUwODYzOTYxMiwiZXhwIjo5OTk5OTk5OTk5fQ.'
+}
 
       verify.jwtChallenges()(req, res, next)
 
@@ -272,7 +280,9 @@ describe('verify', () => {
       Header: { "alg": "none", "typ": "JWT" }
       Payload: { "data": { "email": "jwtn3d@" }, "iat": 1508639612, "exp": 9999999999 }
        */
-      req.headers = { authorization: 'Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJkYXRhIjp7ImVtYWlsIjoiand0bjNkQCJ9LCJpYXQiOjE1MDg2Mzk2MTIsImV4cCI6OTk5OTk5OTk5OX0.' }
+{
+    authorization: 'Bearer eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJkYXRhIjp7ImVtYWlsIjoiand0bjNkQCJ9LCJpYXQiOjE1MDg2Mzk2MTIsImV4cCI6OTk5OTk5OTk5OX0.'
+}
 
       verify.jwtChallenges()(req, res, next)
 
@@ -308,7 +318,9 @@ describe('verify', () => {
         Header: { "alg": "HS256", "typ": "JWT" }
         Payload: { "data": { "email": "rsa_lord@" }, "iat": 1508639612, "exp": 9999999999 }
          */
-        req.headers = { authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImVtYWlsIjoicnNhX2xvcmRAIn0sImlhdCI6MTU4MjIyMTY3NX0.50f6VAIQk2Uzpf3sgH-1JVrrTuwudonm2DKn2ec7Tg8' }
+{
+    authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImVtYWlsIjoicnNhX2xvcmRAIn0sImlhdCI6MTU4MjIyMTY3NX0.50f6VAIQk2Uzpf3sgH-1JVrrTuwudonm2DKn2ec7Tg8'
+}
 
         verify.jwtChallenges()(req, res, next)
 

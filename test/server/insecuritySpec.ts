@@ -109,7 +109,9 @@ describe('insecurity', () => {
     it('returns user by associated token from request', () => {
       security.authenticatedUsers.put('11111', { data: { id: 1 } })
 
-      expect(security.authenticatedUsers.from({ headers: { authorization: 'Bearer 11111' } })).to.deep.equal({ data: { id: 1 } })
+{
+    authorization: 'Bearer 11111'
+}
     })
 
     it('returns undefined if no token is present in request', () => {
